@@ -1,6 +1,6 @@
 # Cyfair Computer Science Club's Main Website
 
-![Frontpage Mockup Image](/repository/mockups/img/mockup.png "Frontpage Mockup")
+![Frontpage Mockup Image](/mockups/img/home.png "Frontpage Mockup")
 
 Ideal design of the front page, but subject to change based on future discussion.
 
