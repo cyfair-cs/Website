@@ -1,8 +1,15 @@
+:root {
+    --background: #1B1B1B;
+    --block-bg: #161616;
+    --text-color: #C9C9C9;
+    --hover-color: #00BAFF;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: #1B1B1B;
-    color: #C9C9C9;
+    background: var(--background);
+    color: var(--text-color);
     font-family: Roboto;
     display: flex;
     flex-direction: column;
@@ -13,7 +20,7 @@ body {
 /* Header */
 
 header {
-    background: #161616;
+    background: var(--block-bg);
     height: 5vh;
     width: 100vw;
     font-size: 1.5vmin;
@@ -38,7 +45,7 @@ header a:last-of-type {
 }
 
 header a[selected] {
-    color: #00BAFF;
+    color: var(--hover-color);
     border-bottom: 2px solid;
 }
 
@@ -48,13 +55,13 @@ header a:hover {
 
 header a {
     text-decoration: none;
-    color: #C9C9C9;
+    color: var(--text-color);
 }
 
 /* Footer */
 
 footer {
-    background: #161616;
+    background: var(--block-bg);
     height: 5vh;
     width: 100vw;
     font-size: 1.5vmin;
@@ -102,7 +109,7 @@ footer {
     padding-bottom: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
-    background-color: #161616;
+    background-color: var(--block-bg);
 }
 
 .card .title {

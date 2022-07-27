@@ -27,5 +27,5 @@
     padding-bottom: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
-    background-color: #161616;
+    background-color: var(--block-bg);
 }

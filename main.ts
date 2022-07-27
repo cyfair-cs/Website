@@ -11,26 +11,31 @@ website.listen(PORT, () => {
     console.log('Started on port ' + PORT);
 });
 
-website.get('/', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'home.html');
+const pages = [ '', 'about', 'presentations', 'meetings', 'competitions', 'important-links' ];
+
+pages.forEach(page => {
+    website.get('/' + page, (req: Request, res: Response) => {
+        let file: string;
+        switch (page) {
+            case '':
+                file = 'home';
+                break;
+            case 'important-links':
+                file = 'importantlinks';
+                break;
+            default:
+                file = page;
+        }
+        res.sendFile(staticdir + file + '.html');
+    });
 });
 
-website.get('/about', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'about.html')
-});
+website.use('/', function(req, res) {
+    res.status(404).sendFile(staticdir + 'notfound.html');        
+}); 
 
-website.get('/presentations', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'presentations.html');
-});
 
-website.get('/meetings', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'meetings.html');
-});
-
-website.get('/competitions', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'competitions.html');
-});
-
-website.get('/important-links', (req: Request, res: Response) => {
-    res.sendFile(staticdir + 'importantlinks.html');
+website.use((err: any, req: Request, res: Response, next: any) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 });
