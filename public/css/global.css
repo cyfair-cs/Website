@@ -69,12 +69,6 @@ header a {
     color: var(--text-color);
 }
 
-#oauth-login {
-    padding: .5vh .5vw .5vh .5vw;
-    border-radius: 3px;
-    background-color: maroon;
-}
-
 /* Footer */
 
 footer {
