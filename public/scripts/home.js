@@ -25,10 +25,18 @@ class Announcement {
     getHTMLComponent(index) {
         return `` +
         `<div class=\"announcement\" id=\"announcement${index}\">` +
+
+        // Title
         `   <span class=\"announcement-title\">${this.title}</span>` +
+
+        // Body Text
         `   <div class=\"body\">` +
-        `       <span class=\"announcement-text\">${this.text}</span>` + ((this.imagelink == undefined || this.imagelink == null) ? '' :
+        `       <span class=\"announcement-text\">${this.text}</span>` + 
+        
+        // Optional Image Link
+        ((this.imagelink == undefined || this.imagelink == null) ? '' :
         `       <img src=\"${this.imagelink}\" alt=\"${this.image_alt_text}\">`) +
+
         `   </div>` +
         `</div>`;
     }

@@ -9,11 +9,13 @@
     <link href="css/global.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <script src="scripts/home.js" defer></script>
+    <script src="scripts/global.js" defer></script>
 </head>
 <body>
     <header>
         <img src="res/img/logo.png" alt="logo">
         <span id="header-title">CFCSC</span>
+        <button id="oauth-login"></button>
         <a selected>Home</a>
         <a href="/about">About Us</a>
         <a href="/important-links">Important Links</a>
@@ -30,13 +32,30 @@
             <div class="body" id="announcements"></div>
         </div>
 
+        <!-- 
+            Only going to embed a temporary copy of the previous slides
+            because the 2022-23 introductory slides has not been created
+            yet. -Mufaro
+         -->
         <div class="card" id="introduction-slides">
             <span class="title">Introduction Slides</span>
-            <div class="body"></div>
+            <div class="body">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000" 
+                frameborder="0" width="480vw" height="300vh" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
         </div>
+
+        <!-- 
+            Only going to embed a temporary empty calendar
+            because the 2022-23 calendar has not been created yet, just 
+            like with the slides.
+         -->
         <div class="card" id="calendar">
             <span class="title">Calendar</span>
-            <div class="body"></div>
+            <div class="body">
+                <iframe src="https://calendar.google.com/calendar/embed?src=r9p88ql1skbmn2g6jg4hqrsd64%40group.calendar.google.com&ctz=America%2FChicago" 
+                style="border: 0" width="480vw" height="300vh" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     </div>
 

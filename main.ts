@@ -19,6 +19,7 @@ website.listen(PORT, () => {
 
 const pages = [ '', 'about', 'presentations', 'meetings', 'competitions', 'important-links' ];
 
+// Simple Router - Will probably be replaced with Apache
 pages.forEach(page => {
     website.get('/' + page, (req: Request, res: Response) => {
         let file: string;
@@ -36,11 +37,13 @@ pages.forEach(page => {
     });
 });
 
+// Not Found
 website.use('/', function(req, res) {
     res.status(404).sendFile(staticdir + 'notfound.html');        
 }); 
 
 
+// Fallback
 website.use((err: any, req: Request, res: Response, next: any) => {
     console.error(err.stack);
     res.status(500).send('ERR: Could not respond to your request');
