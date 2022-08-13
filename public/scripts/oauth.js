@@ -33,4 +33,4 @@ function load_oauth() {
     else disable_button();
 }
 
-window.addEventListener('load', load_oauth());
+window.addEventListener('load', load_oauth);

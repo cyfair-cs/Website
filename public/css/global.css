@@ -51,8 +51,8 @@ header img {
     margin-left: -0.75%;
 }
 
-header a:last-of-type {
-    margin-right: 1.5vw;
+header :last-child {
+    margin-right: 1vw;
 }
 
 header a[selected] {
@@ -112,6 +112,7 @@ footer {
     gap: 3vw;
     margin-right: 10%;
     margin-left: 10%;
+    position: relative;
 }
 
 .card {
@@ -133,4 +134,13 @@ footer {
 .card .title {
     font-size: 2.5vmin;
     margin-bottom: 2vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 50vw;
 }

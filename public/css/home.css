@@ -15,7 +15,8 @@
 /* Announcements */
 
 #announcements {
-    max-height: 80vh; /* 84 */
+    position: absolute;
+    max-height: 65vh;
     align-content: center;
     overflow-y: scroll;
     display: flexbox;
