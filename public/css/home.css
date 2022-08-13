@@ -16,11 +16,13 @@
 
 #announcements {
     position: absolute;
-    max-height: 65vh;
+    max-height: 60vh;
+    width: 30%;
     align-content: center;
     overflow-y: scroll;
     display: flexbox;
     padding: 0vh .5vw 2vh 2.5vw;
+    margin-top: 5vh;
 }
 
 .announcement-title {
