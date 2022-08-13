@@ -8,18 +8,22 @@
     <link rel="icon" type="image/x-icon" href="../res/img/favicon.ico">
     <link href="../css/global.css" rel="stylesheet">
     <script src="../scripts/oauth.js" defer></script>
+
+    <!-- OAuth -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="../scripts/oauth.js" defer></script>
 </head>
 <body>
     <header>
         <img src="../res/img/logo.png" alt="logo">
         <span id="header-title">CFCSC</span>
-        <button id="oauth-login"></button>
         <a href="/">Home</a>
         <a href="/about">About Us</a>
         <a href="/important-links">Important Links</a>
         <a href="/competitions">Competitions</a>
         <a selected>Meetings</a>
         <a href="/presentations">Presentations</a>
+        <div id="oauth-login"></div>
     </header>
 
     <span class="welcome">Meetings</span>

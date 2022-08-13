@@ -63,7 +63,6 @@ class Announcement {
     
     const ancmnts_block = document.getElementById('announcements');
 
-    for (let x = 0; x < 10; x++)
     for (let i = 0; i < ancments_db.length; i++)
         ancmnts_block.innerHTML += ancments_db[i].getHTMLComponent(i);
     console.log('Loaded Announcements.');

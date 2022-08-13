@@ -52,7 +52,7 @@ header img {
 }
 
 header :last-child {
-    margin-right: 1vw;
+    margin-right: 0.3vw;
 }
 
 header a[selected] {
