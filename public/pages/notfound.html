@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFCSC - Not Found</title>
+    <title>Not Found</title>
+    <link rel="icon" type="image/x-icon" href="res/img/favicon.ico">
     <link href="css/global.css" rel="stylesheet">
     <script src="scripts/notfound.js" defer></script>
 </head>
@@ -20,14 +21,18 @@
         <a href="/presentations">Presentations</a>
     </header>
 
-    <span class="welcome"><strong>ERROR 404</strong>: Could not find the page '<code id="pathname"></code>'</span>
+    <span class="welcome">404: Could not find page "<code id="pathname"></code>"</span>
     <script>
         window.onload = () => {
-            document.getElementById('pathname').innerText = window.location.pathname;
+            document.getElementById('pathname').innerText = window.location.pathname.substring(1);
         }
     </script>
 
     <style>
+        #pathname {
+            color: grey;
+        }
+
         #return {
             margin-top: 25vh;
             color: var(--text-color);
