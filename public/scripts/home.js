@@ -34,7 +34,10 @@ class Announcement {
     }
 }
 
-const ancmnts_block = document.getElementById('announcements');
+// Root Function
+window.onload = () => {
+    load_announcements();
+}
 
 /**
  * load all stored announcements
@@ -42,14 +45,17 @@ const ancmnts_block = document.getElementById('announcements');
  * but until the backend is setup, it will
  * be tested with an array
  */
-const ancments_db = [
-    new Announcement("Hello,", "World!"),
-    new Announcement("This is", "an announcement!"),
-    new Announcement("I love", "to code!"),
-    new Announcement("GO CYFAIR!", "This should be an image of the CyFair Computer Science Club\'s logo", "res/img/logo.png", "CFCSC LOGO")
-];
+function load_announcements() {
+    const ancments_db = [
+        new Announcement("Hello,", "World!"),
+        new Announcement("This is", "an announcement!"),
+        new Announcement("I love", "to code!"),
+        new Announcement("GO CYFAIR!", "This should be an image of the CyFair Computer Science Club\'s logo", "res/img/logo.png", "CFCSC LOGO")
+    ];
+    
+    const ancmnts_block = document.getElementById('announcements');
 
-window.onload = () => {
+    for (let x = 0; x < 10; x++)
     for (let i = 0; i < ancments_db.length; i++)
         ancmnts_block.innerHTML += ancments_db[i].getHTMLComponent(i);
     console.log('Loaded Announcements.');

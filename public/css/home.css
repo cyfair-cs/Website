@@ -1,10 +1,30 @@
+/* Sections */
+
+#announcements-all {
+    width: auto;
+    align-content: center;
+    display: flexbox;
+}
+
+#introduction-slides {
+    width: 30%;
+}
+
+#calendar {
+    width: 30%;
+}
+
 /* Announcements */
 
-.announcement-title { /* todo: CSS inheritance for announcement rules */
+#announcements {
+    max-height: 90vh;
+}
+
+.announcement-title {
     font-size: 2.5vmin;
 }
 
-.announcement-text { /* ^ applies here too */
+.announcement-text {
     text-align: left;
 }
 
