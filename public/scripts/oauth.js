@@ -11,19 +11,26 @@ function oauth_login(name) {
     disable_button();
 }
 
+// May replace button disabling with taking 
+// you to a link of your profile.
 function disable_button() {
     oauth_button.innerText = oauth_user_name;
-    oauth_button.setAttribute('value', 'Disabled');
+    oauth_button.setAttribute('disabled', 'true');
 }
 
-window.onload = () => {
+// Root load function for all windows
+function load_oauth() {
     // if user isnt logged in - oauth button to show "log in"
     if (!user_logged_in) {
         oauth_button.innerText = 'Login with Google';
         oauth_button.setAttribute('value', 'Enabled');
         // placeholder for real oauth
-        oauth_button.onclick = () => { oauth_login(prompt('enter something to input as your name')); };
+        oauth_button.onclick = () => { 
+            oauth_login(prompt('enter something to input as your name')); 
+        };
     }
     // otherwise, make it a dead button with their name
     else disable_button();
 }
+
+window.addEventListener('load', load_oauth());

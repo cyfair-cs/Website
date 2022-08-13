@@ -1,9 +1,7 @@
 /* Sections */
 
 #announcements-all {
-    width: auto;
-    align-content: center;
-    display: flexbox;
+    width: 30%;
 }
 
 #introduction-slides {
@@ -17,35 +15,46 @@
 /* Announcements */
 
 #announcements {
-    max-height: 90vh;
+    max-height: 80vh; /* 84 */
+    align-content: center;
+    overflow-y: scroll;
+    display: flexbox;
+    padding: 0vh .5vw 2vh 2.5vw;
 }
 
 .announcement-title {
     font-size: 2.5vmin;
+    overflow-x: hidden;
+    margin-bottom: .2vh;
 }
 
-.announcement-text {
-    text-align: left;
+.announcement-date {
+    color: darkslategray;
+    margin-bottom: 1vh;
 }
 
 .announcement .body img {
-    padding: 3vh;
     max-width: 10vw;
     max-height: 10vh;
 }
 
 .announcement {
-    width: 30%;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     flex-grow: 1;
     max-width: inherit;
-    max-height: 30vh;
-    margin-top: 2vh;
+    /* max-height: 30vh; */
+    margin-bottom: 2vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
     background-color: var(--block-bg);
+    border-radius: 10px;
+}
+
+.announcement:last-of-type {
+    margin-bottom: 0vh;
 }

@@ -71,7 +71,7 @@ header a {
 
 #oauth-login {
     padding: .5vh .5vw .5vh .5vw;
-    border-radius: 2px;
+    border-radius: 3px;
     background-color: maroon;
 }
 
@@ -132,4 +132,5 @@ footer {
 
 .card .title {
     font-size: 2.5vmin;
+    margin-bottom: 2vh;
 }
