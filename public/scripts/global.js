@@ -22,7 +22,7 @@ window.onload = () => {
         oauth_button.innerText = 'Login with Google';
         oauth_button.setAttribute('value', 'Enabled');
         // placeholder for real oauth
-        oauth_button.onclick = () => { oauth_login('Placeholder Name'); };
+        oauth_button.onclick = () => { oauth_login(alert('enter something to input as your name')); };
     }
     // otherwise, make it a dead button with their name
     else disable_button();
