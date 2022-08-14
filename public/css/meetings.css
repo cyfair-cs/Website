@@ -1,5 +1,12 @@
 #cards .card {
-    max-width: 25%;
+    width: 25%;
+    background-color: var(--block-bg);
+    border-radius: 10px;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+#cards {
+    height: 47vh;
 }
 
 .body {
