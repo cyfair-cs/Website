@@ -1,0 +1,22 @@
+#cards-row {
+    font-size: 2.5vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+#discord, #google-drive {
+    justify-content: center;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.body {
+    max-width: 40%;
+}
+
+button {
+    scale: 120%;
+    margin: 0vh 2vw 2vh 0vw;
+    height: min-content;
+}

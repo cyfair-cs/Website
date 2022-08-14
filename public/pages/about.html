@@ -7,6 +7,7 @@
     <title>About</title>
     <link rel="icon" type="image/x-icon" href="../res/img/favicon.ico">
     <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
     <script src="../scripts/oauth.js" defer></script>
 
     <!-- OAuth -->
@@ -27,6 +28,83 @@
     </header>
 
     <span class="welcome">About the Computer Science Club</span>
+
+    <div id="cards">
+
+        <div class="card" id="side-column">
+            <div class="card" id="our-mission">
+                <span class="title">Our Mission</span>
+                <div class="body">
+                    <p>As Cy-Fair's computer science club, we are dedicated to preparing for the Computer Science UIL Competition and Codewars. We go to mock UIL competitions that are held locally. In order to compete, each member will be placed in a team of three. These teams should stay together throughout the year and go to as many competitions as they can.</p>
+                </div>
+            </div>
+    
+            <div class="card" id="joining-the-club">
+                <span class="title">Joining the Club</span>
+                <div class="body">
+                    <button id="join-club-button" onclick="window.location.href='important-links'">Join us!</button>
+                    <p>If you have no coding experience, fear not! Prior programming experience is not required to join the club nor is being in a Cy-Fair Computer Science class. Come to the club, so we can find a place for you!</p>
+                </div>
+            </div>
+
+            <!-- 
+                This would be an link to the google doc,
+                but I don't have access to the previous
+                constitution, so I'll just insert a
+                placeholder
+            -->
+            <div class="card" id="consitution">
+                <span class="title">The Club Constitution</span>
+                <div class="body">
+                    <button onclick="window.location.href='https://docs.google.com/document/d/1wYxmaw4488Oft59gcqWvBtcxsvdig2zMmpxSGcNzNGA/edit?usp=sharing'">View the club constitution (Link)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="club-officers">
+            <span class="title">Club Officers</span>
+            <div class="body" id="club-officer-info-list">
+                <div id="officer-info-left">
+                    <div class="card club-officer-info" id="sponsor">
+                        <h3 class="club-title">Sponsor: Mr. Jasik</h3>
+                    </div>
+    
+                    <div class="card club-officer-info" id="competition">
+                        <h3 class="club-title">Competition Team</h3>
+                        <p>President: Caleb Boatcallie (Senior)</p>
+                        <p>Vice President: Jeremy Licht</p>
+                        <p>CS1k (Pre-Novice) Trainer: Amogh Ajoy (Junior)</p>
+                        <p>Written Test Trainer: Nacho (Senior)</p>
+                    </div>
+    
+                    <div class="card club-officer-info" id="general">
+                        <h3 class="club-title">General</h3>
+                        <p>President: Caleb Boatcallie (Senior)</p>
+                        <p>Vice President: Mufaro Machaya (Junior)</p>
+                        <p>Secretary: Gora (Senior)</p>
+                    </div>
+                </div>
+
+                <div id="officer-info-right">
+                    <div class="card club-officer-info" id="game-dev">
+                        <h3 class="club-title">Game Development</h3>
+                        <p>President: Ben (Sophomore)</p>
+                        <p>Vice President: Caleb Boatcallie (Senior)</p>
+                    </div>
+    
+                    <div class="card club-officer-info" id="girls-who-code">
+                        <h3 class="club-title">Girls Who Code</h3>
+                        <p>President: Alexandra Burke (Junior)</p>
+                    </div>
+
+                    <div class="card club-officer-info" id="math-modeling">
+                        <h3 class="club-title">Math Modeling</h3>
+                        <p>President: Jeremy Licht (Senior)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <span id="footer-copyright">Cy-Fair High School's Computer Science Club, 2022</span>

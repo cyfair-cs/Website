@@ -1,0 +1,42 @@
+/* Mission, Joining the Club, and the Consitution */
+
+#side-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+#the-club-constitution {
+    margin-right: 3vw;
+}
+
+/* Club Officer Info List */
+
+#club-officers {
+    max-width: 60%;
+}
+
+#club-officer-info-list {
+    display: flex;
+    flex-direction: row;
+}
+
+#officer-info-left #officer-info-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#officer-info-left {
+    margin-right: 1vw;
+}
+
+.club-officer-info > p {
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+}
+
+.club-officer-info:last-of-type {
+    margin-bottom: 0vh;
+}
+
