@@ -44,6 +44,7 @@
 .announcement {
     width: auto;
     align-items: left;
+    text-align: left;
     max-width: inherit;
     margin-bottom: 2vh;
     padding: 2vh 2vw 2vh 2vw;

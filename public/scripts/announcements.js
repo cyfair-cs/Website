@@ -24,7 +24,7 @@ class Announcement {
      */
     getHTMLComponent(index) {
         return `` +
-        `<div class=\"card announcement\" id=\"announcement${index}\">` +
+        `<div class=\"announcement card\" id=\"announcement${index}\">` +
 
         // Title
         `   <span class=\"announcement-title\">${this.title}</span>` +
