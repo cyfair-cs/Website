@@ -41,10 +41,11 @@ class CompInfo {
 function load_competitions() {
     const compinfo_db = [
         new CompInfo("Seven Lakes", "https://forms.gle/tdySEK1iR2ts5bkt6", "Our first competition of the year will be the annual Seven Lakes High School competition. Please sign up if you can go. Even if you are not experienced in doing any competition, this will be good practice.", "https://drive.google.com/file/d/119h1m2u6uWEwf_JtPq6b_-flqciFxVZv/view?usp=sharing", "2011-10-10"),
-        new CompInfo("Taylor HS", "https://forms.gle/tdySEK1iR2ts5bkt6", undefined, undefined, '2011-10-10')
+        new CompInfo("Taylor HS", "https://forms.gle/tdySEK1iR2ts5bkt6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", undefined, '2011-10-10')
     ]
 
     const compinfo_block = document.getElementById('competitions');
+    for (let i = 0; i < 3; i++)
     compinfo_db.forEach((compinfo, index) => {
         compinfo_block.innerHTML += compinfo.getHTMLComponent(index);
     })

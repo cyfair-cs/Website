@@ -12,7 +12,7 @@ function load_header() {
         `<a href="/presentations">Presentations</a>`,
 
         // oauth
-        `<div id="oauth-login"></div>`
+        `<div id="oauth-login" class="g_id_signout"></div>`
     ]
 
     switch (window.location.pathname) {
@@ -46,6 +46,9 @@ function load_header() {
 
 function load_footer() {
     document.getElementById('global-footer').innerHTML = `<span id="footer-copyright">CFCSC does not own and is not affiliated with Discord, Remind, PCSquared, the Matrix,  or any other company/business that might claim copyright on any content mentioned on this website. Please don't sue us; we are highschoolers.</span>`;
+
+    // on each page, if user has correct permissions (club officer), then it will allow them to use 
+    // an edit button
 }
 
 window.addEventListener('load', () => {

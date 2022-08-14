@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     max-width: 90vw;
-    max-height: 80vh;
+    height: 33vh;
     overflow-x: scroll;
     overflow-y: hidden;
 }
@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     max-width: 30vw;
+    max-height: 25vh;
     margin-top: 2vh;
     padding: 2vh 2vw 2vh 2vw;
     background-color: var(--block-bg);
@@ -52,4 +53,8 @@
 
 .button-row :last-child {
     margin-right: 0vw;
+}
+
+.description {
+    overflow: hidden;
 }
