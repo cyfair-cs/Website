@@ -1,35 +1,71 @@
-const oauth_button = document.getElementById("oauth-login");
+function decodeJwtResponse(token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
 
+    return JSON.parse(jsonPayload);
+}
+
+/**
+ * Whenever someone logs in with google OAuth,
+ * this function will decode it, cache the response, 
+ * then convert the Div where the sign in button
+ * used to be into a profile name space and a sign
+ * out button
+ */
 function handleCredentialResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential);
-    const payload = jwtDecode<JwtPayload>(response);
-    console.log('Logged User: ' + payload.sub);
+    const payload = decodeJwtResponse(response.credential);
+    console.log('Logged User: ' + payload.name);
     
-    oauth_button.innerHTML = `` +
+    document.getElementById("oauth-login").innerHTML = `` +
     `<span id=\"oauth-profile\">Hello, ${payload.name}</span>` +
     `<button id=\"oauth-signout\">Sign Out</button>`;
-    $('#oauth-login')
-        .css('background', '#202124')
-        .css('border-radius','10px')
-        .css('color','var(--text-color)');
-    $('oauth-signout')
-        .attr('onclick', 'google.accounts.id.disableAutoSelect()');
+
+    // I copied the CSS rules from the "sign in with google" button
+    // to make this button look roughly the same.
+    const oauth_profile = document.getElementById('oauth-profile');
+    oauth_profile.style.background = '#202124';
+    oauth_profile.style.borderRadius = '5px';
+    oauth_profile.style.color = 'var(--text-color)';
+    oauth_profile.style.padding = '6px 7px 6px 7px';
+    oauth_profile.style.marginRight = '.6vw';
+    oauth_profile.style.textAlign = 'center';
+    oauth_profile.style.letterSpacing = '0.25px';
+    oauth_profile.style.fontWeight = '400';
+    oauth_profile.style.whiteSpace = 'nowrap';
+    oauth_profile.style.overflow = 'hidden';
+    oauth_profile.style.textOverflow = 'ellipsis';
+
+    const oauth_signout = document.getElementById('oauth-signout');
+    oauth_signout.addEventListener('click', signout_user);
+    oauth_signout.style.borderRadius = '5px';
+    oauth_signout.style.color = 'var(--text-color)';
+    oauth_signout.style.padding = '6px 7px 6px 7px';
+    oauth_signout.style.textAlign = 'center';
+}
+
+function signout_user() {
+    google.accounts.id.disableAutoSelect();
+    load_oauth_button();
+    console.log('Successfully signed out user.');
 }
 
 function load_oauth_button() {
-    console.log('Loaded Google OAuth Integration.')
-
     google.accounts.id.initialize({
         client_id: "357736292758-cm6civuqaoq68jll5kqi4cke70i8ev7g.apps.googleusercontent.com",
         callback: handleCredentialResponse
     });
 
     google.accounts.id.renderButton(
-        oauth_button,
+        document.getElementById("oauth-login"),
         { theme: "filled_black", size: "medium" }  // customization attributes
     );
 
     google.accounts.id.prompt(); // also display the One Tap dialog
+    console.log('Loaded Google OAuth Sign in Button.');
 }
 
 window.addEventListener('load', load_oauth_button);

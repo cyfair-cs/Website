@@ -12,9 +12,10 @@ function load_header() {
         `<a href="/presentations">Presentations</a>`,
 
         // oauth
-        `<div id="oauth-login" class="g_id_signout"></div>`
+        `<div id="oauth-login"></div>`
     ]
 
+    // determines with link is the current page
     switch (window.location.pathname) {
         case '/':
             headertext[2] = `<a selected>Home</a>`;
