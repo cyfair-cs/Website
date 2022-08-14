@@ -5,13 +5,13 @@ function handleCredentialResponse(response) {
 
 function load_oauth() {
     google.accounts.id.initialize({
-        client_id: "357736292758-sej313mdq6o19sgt89v2i8dokflqjd4l.apps.googleusercontent.com",
+        client_id: "357736292758-cm6civuqaoq68jll5kqi4cke70i8ev7g.apps.googleusercontent.com",
         callback: handleCredentialResponse
     });
 
     google.accounts.id.renderButton(
         document.getElementById("oauth-login"),
-        { theme: "outline", size: "medium" }  // customization attributes
+        { theme: "filled_black", size: "medium" }  // customization attributes
     );
 
     google.accounts.id.prompt(); // also display the One Tap dialog
