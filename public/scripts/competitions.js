@@ -49,6 +49,7 @@ function load_competitions() {
     compinfo_db.forEach((compinfo, index) => {
         compinfo_block.innerHTML += compinfo.getHTMLComponent(index);
     })
+    console.log('Loaded mock competitions.');
 }
 
 window.addEventListener('load', load_competitions);

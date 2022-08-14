@@ -10,6 +10,7 @@ function load_header() {
         `<a href="/competitions">Competitions</a>`,
         `<a href="/meetings">Meetings</a>`,
         `<a href="/presentations">Presentations</a>`,
+        `<a href="/resources">Resources</a>`,
 
         // oauth
         `<div id="oauth-login"></div>`
@@ -35,6 +36,9 @@ function load_header() {
         case '/presentations':
             headertext[7] = `<a selected>Presentations</a>`;
             break;
+        case '/resources':
+            headertext[8] = `<a selected>Resources</a>`;
+            break;
     }
 
     const header = document.getElementById('global-header');
@@ -43,13 +47,15 @@ function load_header() {
         full_header_text += elem;
     });
     header.innerHTML = full_header_text;
+    console.log('Loaded header.');
 }
 
 function load_footer() {
-    document.getElementById('global-footer').innerHTML = `<span id="footer-copyright">CFCSC does not own and is not affiliated with Discord, Remind, PCSquared, the Matrix,  or any other company/business that might claim copyright on any content mentioned on this website. Please don't sue us; we are highschoolers.</span>`;
-
-    // on each page, if user has correct permissions (club officer), then it will allow them to use 
-    // an edit button
+    document.getElementById('global-footer').innerHTML = `` +
+    `<span id="footer-copyright">CFCSC 2022-23</span>` + 
+    `<a href="https://github.com/CFCSC-Development/Website" id="repo-link">Source Code</a>` +
+    `<span id="credit">Made by Caleb Boatcallie and Mufaro Machaya</span>`;
+    console.log('Loaded footer.');
 }
 
 window.addEventListener('load', () => {

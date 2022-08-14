@@ -90,6 +90,15 @@ footer {
     margin-left: 1vw;
 }
 
+#credit {
+    margin-right: 1vw;
+}
+
+#repo-link {
+    text-decoration: underline;
+    color: green;
+}
+
 .welcome {
     margin-top: 10vh;
     font-size: 2.5vmin;

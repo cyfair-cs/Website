@@ -21,7 +21,7 @@ function handleCredentialResponse(response) {
     console.log('Logged User: ' + payload.name);
     
     document.getElementById("oauth-login").innerHTML = `` +
-    `<span id=\"oauth-profile\">Hello, ${payload.name}</span>` +
+    `<span id=\"oauth-profile\">Hello, ${payload.given_name}</span>` +
     `<button id=\"oauth-signout\">Sign Out</button>`;
 
     // I copied the CSS rules from the "sign in with google" button

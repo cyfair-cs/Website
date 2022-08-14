@@ -1,23 +1,17 @@
 import Express, { Request, Response } from 'express'
-// TODO: Install dotenv
-// import dotenv from 'dotenv'
-import ansi from 'cli-color'
 import Path from 'path'
 
-// dotenv.config();
-
 const website = Express();
-// const PORT = process.env.PORT || 3000;
-const PORT = 3000;
+const PORT = process.env.PORT || 4000;
 const staticdir = Path.join(__dirname, '/public/pages/');
 
 website.use(Express.static(Path.join(__dirname, 'public/')));
 
 website.listen(PORT, () => {
-    console.log(`Started on port ${ansi.green(PORT)}`);
+    console.log(`Started on port ${PORT}`);
 });
 
-const pages = [ '', 'about', 'presentations', 'meetings', 'competitions', 'important-links' ];
+const pages = [ '', 'about', 'presentations', 'meetings', 'competitions', 'important-links', 'resources' ];
 
 // Simple Router - Will probably be replaced with Apache
 pages.forEach(page => {
