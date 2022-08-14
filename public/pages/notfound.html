@@ -7,25 +7,15 @@
     <title>Not Found</title>
     <link rel="icon" type="image/x-icon" href="res/img/favicon.ico">
     <link href="../css/global.css" rel="stylesheet">
+    <script src="../scripts/global.js"></script>
     <script src="../scripts/notfound.js" defer></script>
-    <script src="../scripts/oauth.js" defer></script>
 
     <!-- OAuth -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="../scripts/oauth.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="res/img/logo.png" alt="logo">
-        <span id="header-title">CFCSC</span>
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/important-links">Important Links</a>
-        <a href="/competitions">Competitions</a>
-        <a href="/meetings">Meetings</a>
-        <a href="/presentations">Presentations</a>
-        <div id="oauth-login"></div>
-    </header>
+    <header id="global-header"></header>
 
     <span class="welcome">404: Could not find page "<code id="pathname"></code>"</span>
     <script>
@@ -53,7 +43,5 @@
     </style>
     <a class="welcome" id="return" href="/">Return to Home</a>
 
-    <footer>
-        <span id="footer-copyright">Cy-Fair High School's Computer Science Club, 2022</span>
-    </footer>
+    <footer id="global-footer"></footer>
 </body>

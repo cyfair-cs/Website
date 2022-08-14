@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="../res/img/favicon.ico">
     <link href="../css/global.css" rel="stylesheet">
+    <script src="../scripts/global.js"></script>
     <link href="../css/home.css" rel="stylesheet">
     <script src="../scripts/announcements.js" defer></script>
 
@@ -15,17 +16,7 @@
     <script src="../scripts/oauth.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="../res/img/logo.png" alt="logo">
-        <span id="header-title">CFCSC</span>
-        <a selected>Home</a>
-        <a href="/about">About Us</a>
-        <a href="/important-links">Important Links</a>
-        <a href="/competitions">Competitions</a>
-        <a href="/meetings">Meetings</a>
-        <a href="/presentations">Presentations</a>
-        <div id="oauth-login"></div>
-    </header>
+    <header id="global-header"></header>
 
     <span class="welcome">Welcome to the Cy-Fair Computer Science Club's Website</span>
 
@@ -62,8 +53,6 @@
         </div>
     </div>
 
-    <footer>
-        <span id="footer-copyright">Cy-Fair High School's Computer Science Club, 2022</span>
-    </footer>
+    <footer id="global-footer"></footer>
 </body>
 </html>
