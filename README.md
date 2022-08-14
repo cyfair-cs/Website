@@ -23,5 +23,6 @@ Backend Goals:
 
 # Google OAuth Secrets
 
-Client ID: 357736292758-sej313mdq6o19sgt89v2i8dokflqjd4l.apps.googleusercontent.com
-Client Secret: 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
+* Client ID: 357736292758-sej313mdq6o19sgt89v2i8dokflqjd4l.apps.googleusercontent.com
+
+* Client Secret: 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
