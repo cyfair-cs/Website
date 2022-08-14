@@ -6,6 +6,11 @@
     --button-bg: #063A20;
 }
 
+a {
+    color: green;
+    text-decoration: none;
+}
+
 /* Removing any styling on button tags for better use. */
 button, input[type="submit"], input[type="reset"] {
 	background: var(--button-bg);
@@ -137,6 +142,7 @@ footer {
 .card .title {
     font-size: 2.5vmin;
     margin-bottom: 2vh;
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
