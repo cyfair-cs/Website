@@ -1,0 +1,55 @@
+#competitions {
+    display: flex;
+    flex-direction: row;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#cards, .title-date-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    margin-bottom: 1vh;
+    margin-right: 2vw;
+}
+
+.welcome {
+    margin-bottom: 5vh;
+}
+
+.compinfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+    margin-top: 2vh;
+    padding: 2vh 2vw 2vh 2vw;
+    background-color: var(--block-bg);
+    border-radius: 10px;
+    margin-right: 2vw;
+}
+
+.compinfo:last-of-type {
+    margin-right: 0vw;
+}
+
+.date {
+    color: darkslategray;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+
+.button-row > * {
+    margin-right: .5vw;
+}
+
+.button-row :last-child {
+    margin-right: 0vw;
+}

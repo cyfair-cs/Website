@@ -7,10 +7,10 @@ class Announcement {
     imagelink;
     image_alt_text;
 
-    constructor (title, text, imagelink, image_alt_text, date = new Date()) {
+    constructor (title, text, imagelink, image_alt_text, date) {
         this.title = title;
         this.text = text;
-        this.date = date;
+        this.date = date === undefined ? new Date() : new Date(date);
         this.imagelink = imagelink;
         this.image_alt_text = image_alt_text;
     }
@@ -30,7 +30,8 @@ class Announcement {
         `   <span class=\"announcement-title\">${this.title}</span>` +
 
         // Date
-        `   <span class=\"announcement-date\">${this.date.toDateString()}</span>` +
+        // TODO: fix date data mismatch. wont show correct date despite correct formatting
+        `   <span class=\"announcement-date\">${this.date.getMonth()}/${this.date.getDay()}/${this.date.getFullYear()}</span>` +
 
         // Body Text
         `   <div class=\"body\">` +
