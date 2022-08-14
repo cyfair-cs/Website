@@ -33,9 +33,6 @@ function handleCredentialResponse(response) {
     oauth_profile.style.padding = '6px 7px 6px 7px';
     oauth_profile.style.marginRight = '.6vw';
     oauth_profile.style.textAlign = 'center';
-    oauth_profile.style.letterSpacing = '0.25px';
-    oauth_profile.style.fontWeight = '400';
-    oauth_profile.style.whiteSpace = 'nowrap';
     oauth_profile.style.overflow = 'hidden';
     oauth_profile.style.textOverflow = 'ellipsis';
 

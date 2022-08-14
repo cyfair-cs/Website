@@ -54,3 +54,8 @@
 .announcement:last-of-type {
     margin-bottom: 0vh;
 }
+
+.announcement-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

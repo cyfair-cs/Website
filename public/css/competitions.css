@@ -31,6 +31,7 @@
     background-color: var(--block-bg);
     border-radius: 10px;
     margin-right: 2vw;
+    text-overflow: ellipsis;
 }
 
 .compinfo:last-of-type {
@@ -57,4 +58,5 @@
 
 .description {
     overflow: hidden;
+    text-overflow: ellipsis;
 }
