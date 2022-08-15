@@ -1,0 +1,35 @@
+.presentation {
+    margin-top: 2vh;
+    padding: 2vh 2vw 2vh 2vw;
+    background-color: var(--block-bg);
+    border-radius: 10px;
+}
+
+.presentation-title {
+    font-size: 2vmin;
+    font-weight: 700;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.tag {
+    color: darkslategray;
+}
+
+#presentations {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-container > .presentation {
+    margin-right: 3vw;
+}
+
+.slide-container > .presentation:last-of-type {
+    margin-right: 0vw;
+}

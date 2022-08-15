@@ -2,7 +2,7 @@ import Express, { Request, Response } from 'express'
 import Path from 'path'
 
 const website = Express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const staticdir = Path.join(__dirname, '/public/pages/');
 
 website.use(Express.static(Path.join(__dirname, 'public/')));
