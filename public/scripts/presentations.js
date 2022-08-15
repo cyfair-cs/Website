@@ -51,6 +51,10 @@ function load_presentations(searchTags=[]) {
         new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
         new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
         new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
+        new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
+        new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
+        new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
+        new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
     ];
 
     let slide_container_index = 0;
@@ -68,20 +72,15 @@ function load_presentations(searchTags=[]) {
             // count is still unaffected
             continue;
 
-        function isOverflown(element){
-            const response = element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-            console.log('Overflown?: ' + response);
-        }
-
         // add slide to current container
         current_container.innerHTML += presentations_db[i].getHTMLComponent(i);
 
-        console.log('Scroll Width: ' + current_container.scrollWidth + ', Client Width: ' + current_container.clientWidth);
-        console.log('Scroll Height: ' + current_container.scrollHeight + ', Client Height: ' + current_container.clientHeight);
+        const overflow = current_container.scrollWidth > current_container.clientWidth;
+
+        console.debug('Scroll Width: ' + current_container.scrollWidth + ', Client Width: ' + current_container.clientWidth + ', Scroll Height: ' + current_container.scrollHeight + ', Client Height: ' + current_container.clientHeight + ', Overflown?: ' + overflow);
 
         // if slide overflows the current container
-        // current_container.scrollWidth > current_container.clientWidth
-        if (isOverflown(current_container))  {
+        if (current_container.scrollWidth > current_container.clientWidth)  {
             // move element to the next container
             const movedElement = current_container.lastElementChild;
             current_container.removeChild(movedElement);

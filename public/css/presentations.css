@@ -1,5 +1,6 @@
 .presentation {
     margin-top: 2vh;
+    max-width: 24%;
     padding: 2vh 2vw 2vh 2vw;
     background-color: var(--block-bg);
     border-radius: 10px;
@@ -19,6 +20,13 @@
 #presentations {
     display: flex;
     flex-direction: column;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    margin-top: 3vh;
+    max-width: 80vw;
+    max-height: 65vh;
+    overflow-y: scroll;
+    align-content: left;
 }
 
 .slide-container {
