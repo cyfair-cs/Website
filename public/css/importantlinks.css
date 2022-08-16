@@ -11,14 +11,14 @@
     flex-direction: row;
 }
 
-.body {
-    max-width: 40%;
-}
-
-button {
+#discord > button, #google-drive > button {
     margin: 5vh 5vw 2vh 0vw;
     height: min-content;
     scale: 160%;
+}
+
+.body {
+    max-width: 40%;
 }
 
 button > a {

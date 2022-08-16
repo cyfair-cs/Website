@@ -10,7 +10,7 @@ function decodeJwtResponse(token) {
 
 /**
  * Whenever someone logs in with google OAuth,
- * this function will decode it, cache the response, 
+ * this function will decode it, cache the response,
  * then convert the Div where the sign in button
  * used to be into a profile name space and a sign
  * out button
@@ -19,9 +19,13 @@ function handleCredentialResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential);
     const payload = decodeJwtResponse(response.credential);
     console.log('Logged User: ' + payload.name);
-    
+    sessionStorage.setItem('google_user', JSON.stringify(payload));
+    load_profile_signout(payload);
+}
+
+function load_profile_signout(user) {
     document.getElementById("oauth-login").innerHTML = `` +
-    `<span id=\"oauth-profile\">Hello, ${payload.given_name}</span>` +
+    `<span id=\"oauth-profile\">Hello, ${user.given_name}</span>` +
     `<button id=\"oauth-signout\">Sign Out</button>`;
 
     // I copied the CSS rules from the "sign in with google" button
@@ -65,4 +69,12 @@ function load_oauth_button() {
     console.log('Loaded Google OAuth Sign in Button.');
 }
 
-window.addEventListener('load', load_oauth_button);
+window.addEventListener('load', () => {
+    const user_raw = sessionStorage.getItem('google_user');
+    console.debug(user_raw);
+    if (user_raw == null) // non logged in
+        load_oauth_button();
+    else {
+        load_profile_signout(JSON.parse(user_raw));
+    }
+});

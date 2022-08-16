@@ -12,11 +12,17 @@ Frontend: NodeJS (Typescript/Express)
 Backend: C#
 
 Frontend Goals:
-- UI for accessing the website
+- X UI for accessing the website
 - UI for editing website contents easily (for those with permissions)
-- Google OAuth login integration (to then interface with backend permission system)
+- X Google OAuth login integration (to then interface with backend permission system)
 
 Backend Goals:
 - MongoDB storage for Google OAuth information, stored website data (Announcement posts, Competition Announcements, and Meeting Reminders, etc.) and other persistent data
 - Google OAuth based permission system for managing users
 - Frontend interaction endpoints
+
+# Frontend
+
+### OAuth integration
+
+When a user is signed into the website through Google, the login information is stored into the sessionStorage as JSON data.
