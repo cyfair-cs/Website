@@ -14,6 +14,9 @@
     <!-- OAuth -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="../scripts/oauth.js" defer></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/130d4aa3a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="global-header"></header>
@@ -22,11 +25,13 @@
 
     <div id="cards">
         <div class="card" id="announcements-all">
-            <span class="title">Announcements</span>
+            <div class="editable-row">
+                <span class="editable title">Announcements</span>
+            </div>
             <div class="body" id="announcements"></div>
         </div>
 
-        <!-- 
+        <!--
             Only going to embed a temporary copy of the previous slides
             because the 2022-23 introductory slides has not been created
             yet.
@@ -34,20 +39,20 @@
         <div class="card" id="introduction-slides">
             <span class="title">Introduction Slides</span>
             <div class="body">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000" 
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000"
                 width="480" height="300" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
         </div>
 
-        <!-- 
+        <!--
             Only going to embed a temporary empty calendar
-            because the 2022-23 calendar has not been created yet, just 
+            because the 2022-23 calendar has not been created yet, just
             like with the slides.
          -->
         <div class="card" id="calendar">
             <span class="title">Calendar</span>
             <div class="body">
-                <iframe src="https://calendar.google.com/calendar/embed?src=r9p88ql1skbmn2g6jg4hqrsd64%40group.calendar.google.com&ctz=America%2FChicago" 
+                <iframe src="https://calendar.google.com/calendar/embed?src=r9p88ql1skbmn2g6jg4hqrsd64%40group.calendar.google.com&ctz=America%2FChicago"
                 style="border: 0" width="480" height="300" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>

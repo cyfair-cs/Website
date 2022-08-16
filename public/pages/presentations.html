@@ -14,10 +14,16 @@
     <!-- OAuth -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="../scripts/oauth.js" defer></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/130d4aa3a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="global-header"></header>
-    <span class="welcome">Past Presentations</span>
+
+    <div class="editable-row welcome">
+        <span class="editable welcome">Past Presentations</span>
+    </div>
 
     <div id="search" class="styled-card card">
         <span id="search-title">Search</span>
@@ -30,6 +36,6 @@
     </div>
 
     <div id="presentations"></div>
-    
+
     <footer id="global-footer"></footer>
 </body>

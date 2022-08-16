@@ -4,7 +4,7 @@
 
 Ideal design of the front page, but subject to change based on future discussion.
 
-### Outline
+## Outline
 
 Frontend is programmed by Mufaro (except for Google OAuth integration), backend is handled by Caleb.
 
@@ -21,8 +21,14 @@ Backend Goals:
 - Google OAuth based permission system for managing users
 - Frontend interaction endpoints
 
-# Frontend
-
-### OAuth integration
+## OAuth integration
 
 When a user is signed into the website through Google, the login information is stored into the sessionStorage as JSON data.
+
+### false admin checks:
+
+1. announcements.js:
+
+- 61
+- 73
+-

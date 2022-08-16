@@ -29,15 +29,6 @@ class Presentation {
     }
 }
 
-// array helper function
-// checks if arr contains all of context
-function includesAll(arr=[], context=[]) {
-    for (let i = 0; i < context.length; i++)
-        if (!arr.includes(context[i]))
-            return false;
-    return true;
-}
-
 const presentations_db = [
     new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Introduction Slides', [ 'general', 'introduction' ]),
     new Presentation('https://docs.google.com/presentation/d/e/2PACX-1vTQ2VYwLGx94QpCMdPwyWy4fIiuYe89b3XnVXDMbB7bw9LrMs7UvtWhfZeaXWqw7CRGfA_wJVxISagQ/embed?start=false&loop=false&delayms=3000', 'Girls who code slide', [ 'girls who code', 'introduction' ]),
@@ -78,6 +69,15 @@ function load_presentations(search_name='', searchTags=[]) {
     // just in case theres no options
     if (radio_button_container.innerHTML == '')
         radio_button_container += `<span id="empty-tags">No tags found.</span>`
+
+    // array helper function
+    // checks if arr contains all of context
+    function includesAll(arr=[], context=[]) {
+        for (let i = 0; i < context.length; i++)
+            if (!arr.includes(context[i]))
+                return false;
+        return true;
+    }
 
     let slide_container_index = 0;
     // loads the first containers
@@ -128,6 +128,28 @@ function load_presentations(search_name='', searchTags=[]) {
         `<span id="contact-devs">If you believe that something is wrong, contact one of the developers.</span>\n`;
 
     console.log('Loaded presentations.')
+
+    const user_raw = sessionStorage.getItem('google_user');
+    // if user is an admin with permissions
+    // no backend so cant implement this yet
+    if (!(user_raw == null || user_raw == 'null') && true)
+        document.getElementsByClassName('editable-row')[0].innerHTML += '<button class="edit-icon" onclick="edit_presentations()"><i class="fa-solid fa-pencil"></i></button>\n';
+}
+
+function edit_presentations() {
+    // verify that user is logged in
+    const user_raw = sessionStorage.getItem('google_user');
+    if (user_raw == null || user_raw == 'null')
+        return;
+    const user = JSON.parse(user_raw);
+
+    // verify that user is an admin
+    // cannot be done as there is no backend yet
+    if (false)
+        return;
+
+    // show edit menu
+
 }
 
 function search_submit() {
@@ -141,9 +163,5 @@ function search_submit() {
     load_presentations(search_name, tag_selections);
 }
 
-window.addEventListener('load', () => {
-    load_presentations();
-});
-window.addEventListener('resize', () => {
-    load_presentations();
-});
+window.addEventListener('load', () => { load_presentations() });
+window.addEventListener('resize', () => { load_presentations() });
