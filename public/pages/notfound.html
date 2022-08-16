@@ -7,6 +7,7 @@
     <title>Not Found</title>
     <link rel="icon" type="image/x-icon" href="res/img/favicon.ico">
     <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/notfound.css" rel="stylesheet">
     <script src="../scripts/global.js"></script>
     <script src="../scripts/notfound.js" defer></script>
 
@@ -23,24 +24,6 @@
             document.getElementById('pathname').innerText = window.location.pathname.substring(1);
         }
     </script>
-
-    <style>
-        #pathname {
-            color: grey;
-        }
-
-        #return {
-            margin-top: 25vh;
-            color: var(--text-color);
-            text-decoration: none;
-            scale: 200%;
-        }
-
-        #return:hover {
-            /* color: var(--hover-color); */
-            border-bottom: 2px solid;
-        }
-    </style>
     <a class="welcome" id="return" href="/">Return to Home</a>
 
     <footer id="global-footer"></footer>

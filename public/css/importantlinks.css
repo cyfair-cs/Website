@@ -21,6 +21,6 @@ button {
     scale: 160%;
 }
 
-a {
+button > a {
     color: var(--text-color);
 }
