@@ -17,7 +17,19 @@
 </head>
 <body>
     <header id="global-header"></header>
-    <span class="welcome">Presentations</span>
+    <span class="welcome">Past Presentations</span>
+
+    <div id="search" class="styled-card card">
+        <span id="search-title">Search</span>
+        <span id="tag-title">Search by tags:</span>
+        <div id="presentation-search-tags"></div>
+        <div id="search-bottom">
+            <input type="search" id="presentation-name-searchbar" name="presentation-name-searchbar" placeholder="Search by name...">
+            <button id="presentation-name-search-button" onclick="search_submit()">Search</button>
+        </div>
+    </div>
+
     <div id="presentations"></div>
+    
     <footer id="global-footer"></footer>
 </body>

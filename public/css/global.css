@@ -16,9 +16,10 @@ button, input[type="submit"], input[type="reset"] {
 	background: var(--button-bg);
 	color: var(--text-color);
     border-radius: 2px;
-    padding: 5px 5px 5px 5px;
+    padding: .5vh .5vw .5vh .5vw;
 	border: none;
 	font: inherit;
+    font-size: 1.4vmin;
 	cursor: pointer;
 	outline: inherit;
 }
@@ -28,7 +29,7 @@ body {
     padding: 0;
     background: var(--background);
     color: var(--text-color);
-    font-family: Roboto;
+    font-family: Roboto, Helvetica, Arial, Verdana;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,7 +133,7 @@ footer {
     flex-grow: 1;
 }
 
-.card .card {
+.card .card, .styled-card {
     margin-top: 2vh;
     padding: 2vh 2vw 2vh 2vw;
     background-color: var(--block-bg);

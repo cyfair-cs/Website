@@ -54,7 +54,7 @@ function load_footer() {
     document.getElementById('global-footer').innerHTML = `` +
     `<span id="footer-copyright">CFCSC 2022-23</span>` + 
     `<a href="https://github.com/CFCSC-Development/Website" id="repo-link">Source Code</a>` +
-    `<span id="credit">Made by Caleb Boatcallie and Mufaro Machaya</span>`;
+    `<span id="credit">Made by <a href="https://github.com/ViperTools">Caleb Boatcallie</a> and <a href="https://github.com/nickelulz">Mufaro Machaya</a></span>`;
     console.log('Loaded footer.');
 }
 
