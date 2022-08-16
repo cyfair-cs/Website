@@ -132,8 +132,15 @@ function load_presentations(search_name='', searchTags=[]) {
     const user_raw = sessionStorage.getItem('google_user');
     // if user is an admin with permissions
     // no backend so cant implement this yet
-    if (!(user_raw == null || user_raw == 'null') && true)
-        document.getElementsByClassName('editable-row')[0].innerHTML += '<button class="edit-icon" onclick="edit_presentations()"><i class="fa-solid fa-pencil"></i></button>\n';
+    if (!(user_raw == null || user_raw == 'null') && true) {
+        // have to do this to prevent
+        // duplication of the edit button
+        const container = document.getElementsByClassName('editable-row')[0];
+        const title = container.firstElementChild;
+        container.innerHTML = '';
+        container.appendChild(title);
+        container.innerHTML += '<button class="edit-icon" onclick="edit_presentations()"><i class="fa-solid fa-pencil"></i></button>\n';
+    }
 }
 
 function edit_presentations() {
