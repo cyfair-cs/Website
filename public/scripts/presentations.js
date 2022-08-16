@@ -90,7 +90,7 @@ function load_presentations(search_name='', searchTags=[]) {
     for (let i = 0; i < presentations_db.length; i++) {
         // searching by name first
         // assuming name is enabled
-        if (!presentations_db[i].title.includes(search_name))
+        if (!presentations_db[i].title.toLowerCase().includes(search_name.toLowerCase()))
             continue;
 
         // skip anything not within tags

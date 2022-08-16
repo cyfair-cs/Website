@@ -16,7 +16,11 @@
 }
 
 button {
-    scale: 120%;
-    margin: 0vh 2vw 2vh 0vw;
+    margin: 5vh 5vw 2vh 0vw;
     height: min-content;
+    scale: 160%;
+}
+
+a {
+    color: var(--text-color);
 }

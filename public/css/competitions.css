@@ -9,12 +9,16 @@
 
 #cards, .title-date-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .title {
+    margin-bottom: .5vh;
+}
+
+.date {
+    font-size: 1.8vmin;
     margin-bottom: 1vh;
-    margin-right: 2vw;
 }
 
 .welcome {
@@ -24,7 +28,9 @@
 .compinfo {
     display: flex;
     flex-direction: column;
-    max-width: 30vw;
+    flex-shrink: 0 !important;
+    max-width: 20vw;
+    width: 20vw;
     max-height: 25vh;
     margin-top: 2vh;
     padding: 2vh 2vw 2vh 2vw;
@@ -57,6 +63,6 @@
 }
 
 .description {
-    overflow: hidden;
+    overflow: scroll;
     text-overflow: ellipsis;
 }

@@ -10,6 +10,13 @@
     margin-right: 3vw;
 }
 
+#join-club-button {
+    /* Cannot figure out how to correctly
+    align this button to the center, so I'm
+    just going to artificially center it */
+    margin-left: 42%;
+}
+
 /* Club Officer Info List */
 
 #club-officers {
@@ -39,4 +46,3 @@
 .club-officer-info:last-of-type {
     margin-bottom: 0vh;
 }
-
