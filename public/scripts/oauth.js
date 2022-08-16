@@ -16,10 +16,9 @@ function decodeJwtResponse(token) {
  * out button
  */
 function handleCredentialResponse(response) {
-    console.log("Encoded JWT ID token: " + response.credential);
     const payload = decodeJwtResponse(response.credential);
-    console.log('Logged User: ' + payload.name);
     sessionStorage.setItem('google_user', JSON.stringify(payload));
+    console.debug(JSON.stringify(payload));
     load_profile_signout(payload);
 }
 
@@ -51,7 +50,7 @@ function load_profile_signout(user) {
 function signout_user() {
     google.accounts.id.disableAutoSelect();
     load_oauth_button();
-    console.log('Successfully signed out user.');
+    sessionStorage.setItem('google_user', null);
 }
 
 function load_oauth_button() {
@@ -71,8 +70,7 @@ function load_oauth_button() {
 
 window.addEventListener('load', () => {
     const user_raw = sessionStorage.getItem('google_user');
-    console.debug(user_raw);
-    if (user_raw == null) // non logged in
+    if (user_raw == null || user_raw == "null") // non logged in
         load_oauth_button();
     else {
         load_profile_signout(JSON.parse(user_raw));

@@ -100,6 +100,15 @@ footer {
     margin-right: 1vw;
 }
 
+#credit > a {
+    margin-left: .1vw;
+    margin-right: .1vw;
+}
+
+#credit > a:last-of-type {
+    margin-right: 0vw;
+}
+
 #repo-link {
     text-decoration: underline;
     color: green;
