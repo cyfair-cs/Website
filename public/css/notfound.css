@@ -1,0 +1,15 @@
+#pathname {
+    color: grey;
+}
+
+#return {
+    margin-top: 25vh;
+    color: var(--text-color);
+    text-decoration: none;
+    scale: 200%;
+}
+
+#return:hover {
+    /* color: var(--hover-color); */
+    border-bottom: 2px solid;
+}
